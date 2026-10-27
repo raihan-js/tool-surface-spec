@@ -171,4 +171,4 @@ Or, if an individual or individual(s):
 
 | Name | Country | Email address |
 |-----------|-----------|-----------|
-| Raihan Sikder | [confirm] | araihansikder@gmail.com |
+| Raihan Sikder | Bangladesh | araihansikder@gmail.com |
