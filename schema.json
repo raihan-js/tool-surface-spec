@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/raihan-js/tool-surface-spec/schema/v1.json",
+  "title": "ToolSurface Canonical Tool Description",
+  "description": "A conformant MCP tool description: a JSON object of at most five fields, no free prose outside them. Governs the content of the MCP `description` field only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["purpose"],
+  "properties": {
+    "purpose": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500,
+      "description": "One factual sentence. Must not name or instruct another tool."
+    },
+    "params": {
+      "type": "string",
+      "maxLength": 500,
+      "description": "Plain-language summary that references the inputSchema; never restates it."
+    },
+    "returns": {
+      "type": "string",
+      "maxLength": 500,
+      "description": "What the tool returns."
+    },
+    "side_effects": {
+      "type": "string",
+      "enum": ["read_only", "write", "network", "mixed"]
+    },
+    "examples": {
+      "type": "array",
+      "maxItems": 5,
+      "description": "Bounded list of real input/output pairs. No instructions inside them.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["input", "output"],
+        "properties": {
+          "input": { "type": "string" },
+          "output": { "type": "string" }
+        }
+      }
+    }
+  }
+}
