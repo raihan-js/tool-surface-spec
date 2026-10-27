@@ -1,6 +1,6 @@
 # [Project Proposal] ToolSurface
 
-> Draft — do not submit until the `raihan-js/tool-surface-spec` repo exists with CI green (see "Open items" at the bottom).
+> Repo live at https://github.com/raihan-js/tool-surface-spec (CI green). Ready to submit once you've reviewed the text.
 
 ### Project Name
 
